@@ -15,6 +15,7 @@ on:
 jobs:
   Primeiro-fluxo:
     name: Job 1 # este é o nome do fluxo de trabalho
+    needs: Terceiro-fluxo # executa depois da order pedida
     runs-on: ubuntu-latest # para ser executado nesta máquina virtual ( container linux ) 
     # Incluindo os passos agora do script
     steps:
@@ -26,6 +27,7 @@ jobs:
         run: echo "Executando o terceiro passo do fluxo"  
   Segundo-fluxo:
     name: Job 2 # este é o nome do fluxo de trabalho
+    needs: Primeiro-fluxo # executa depois da order pedida
     runs-on: ubuntu-latest # para ser executado nesta máquina virtual ( container linux ) 
     # Incluindo os passos agora do script
     steps:
