@@ -1,0 +1,48 @@
+# Colocar nome do pipeline para o fluxo de trabalho
+name: Primeiro Workflow
+# Eventos de gatilho para disparar que dispara script
+on:
+  push: 
+    branches:  
+      - developer
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+# Quais são os trabalhos (fluxos) a serem executados       
+jobs:
+  Primeiro-fluxo:
+    name: Job 1 # este é o nome do fluxo de trabalho
+    runs-on: ubuntu-latest # para ser executado nesta máquina virtual ( container linux ) 
+    # Incluindo os passos agora do script
+    steps:
+      - name: Passo 1
+        run: echo "Executando o primeiro passo do fluxo"
+      - name: Passo 2
+        run: echo "Executando o segundo passo do fluxo"
+      - name: Passo 3
+        run: echo "Executando o terceiro passo do fluxo"  
+  Segundo-fluxo:
+    name: Job 2 # este é o nome do fluxo de trabalho
+    runs-on: ubuntu-latest # para ser executado nesta máquina virtual ( container linux ) 
+    # Incluindo os passos agora do script
+    steps:
+      - name: Passo 4
+        run: echo "Executando o primeiro passo do fluxo"
+      - name: Passo 5
+        run: echo "Executando o segundo passo do fluxo"
+      - name: Passo 6
+        run: echo "Executando o terceiro passo do fluxo"  
+  Terceiro-fluxo:
+    name: Job 3 # este é o nome do fluxo de trabalho
+    runs-on: ubuntu-latest # para ser executado nesta máquina virtual ( container linux ) 
+    # Incluindo os passos agora do script
+    steps:
+      - name: Passo 7
+        run: echo "Executando o primeiro passo do fluxo"
+      - name: Passo 8
+        run: echo "Executando o segundo passo do fluxo"
+      - name: Passo 9
+        run: echo "Executando o terceiro passo do fluxo"  
